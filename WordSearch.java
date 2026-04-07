@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class WordSearch {
+public class Main {
     static int[][] offSets = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
 
     static boolean dfs(int row, int col, int R, int C, boolean[][] visited, char[][] board, String word, int idx) {
