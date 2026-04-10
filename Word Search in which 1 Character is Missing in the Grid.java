@@ -44,7 +44,7 @@ public class Main {
                     return true;
             }
         }
-        if (skipped <= 1) {
+        if (skipped == 0) {
             if (dfs(row, col, R, C, word, grid, visited, idx + 1, skipped + 1))
                 return true;
         }

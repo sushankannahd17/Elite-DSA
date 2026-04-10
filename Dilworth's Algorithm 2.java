@@ -21,11 +21,11 @@ public class Main {
 				if (grid[row][col] != 5) {					
 					dp[row][col] = Math.max(dp[row + 1][col], dp[row][col - 1]);
 				} else {
-					dp[row][col] = dp[row + 1][col] + 1;
+					dp[row][col] = dp[row + 1][col - 1] + 1;
 				}
 			}
 		}
 		
-		System.out.println(dp[0][R - 1]);
+		System.out.println(dp[0][C - 1]);
 	}
 }

@@ -6,15 +6,8 @@ public class Main {
 		
 		int R = sc.nextInt(), C = sc.nextInt();
 		
-		char[][] grid = new char[R][C];
-		for (int row = 0; row < R; row++) grid[row] = sc.next().toCharArray();
-		
-		int ctr = 0;
-		for (int row = 0; row < R; row++) {
-			for (int col = 0; col < C; col++) {
-				if (grid[row][col] == 'C') ctr++;
-			}
-		}
+		int[][] grid = new int[R][C];
+		for (int row = 0; row < R; row++) for (int col = 0; col < C; col++) grid[row][col] = sc.nextInt();
 		
 		int[][] dp = new int[R][C];
 		
@@ -23,11 +16,11 @@ public class Main {
 				int max = 0;
 				if ((row + 1) < R) max = Math.max(max, dp[row + 1][col]);
 				if ((col - 1) >= 0) max = Math.max(max, dp[row][col - 1]);
-				max += (grid[row][col] == 'C') ? 1 : 0;
+				max += (grid[row][col] == 5) ? 1 : 0;
 				dp[row][col] = max;
 			}
 		}		
 		
-		System.out.println(ctr - dp[0][C - 1]);
+		System.out.println(dp[0][C - 1]);
 	}
 }
