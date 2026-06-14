@@ -49,6 +49,7 @@ public class Main {
 		for (int i = 1; i <= N; i++) arr[i] += odp[i];
 		
 		for (int i = 1; i <= N; i++) System.out.print(arr[i] + " ");
+		System.out.println();
 	}
 
 	public static void main(String[] args) {

@@ -33,13 +33,14 @@ public class Main {
 
         for (int row = 0; row < R; row++) {
             for (int col = 0; col < C; col++) {
-                if (board[row][col] == word.charAt(0));
-                visited[row][col] = true;
-                if (dfs(row, col, R, C, visited, board, word, 1)) {
-                    System.out.println("YES");
-                    return;
+                if (board[row][col] == word.charAt(0)) {
+	                visited[row][col] = true;
+	                if (dfs(row, col, R, C, visited, board, word, 1)) {
+	                    System.out.println("YES");
+	                    return;
+	                }
+	                visited[row][col] = false;
                 }
-                visited[row][col] = false;
             }
         }
 

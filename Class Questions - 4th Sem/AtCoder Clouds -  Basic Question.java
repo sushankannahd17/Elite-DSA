@@ -9,17 +9,10 @@ public class Main {
 		for (int i = 1; i <= N; i++) arr[i] = sc.nextInt();
 		
 		int Q = sc.nextInt();
-		int[][] queries = new int[Q][3];
-		
-		for (int i = 0; i < Q; i++) {
-			queries[i][0] = sc.nextInt();
-			queries[i][1] = sc.nextInt();
-			queries[i][2] = sc.nextInt();
-		}
 		
 		int[] dp = new int[N + 2];
-		for (int[] query : queries) {
-			int lt = query[0], rt = query[1], val = query[2];
+		for (int i = 1; i <= Q; i++) {
+			int lt = sc.nextInt(), rt = sc.nextInt(), val = sc.nextInt();
 			
 			dp[lt] += val;
 			dp[rt + 1] -= val;
