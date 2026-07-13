@@ -10,10 +10,11 @@ public class Main {
 			operations[row][1] = sc.nextInt();
 		}
 		
-		System.out.println(numOfIslands(R, C, operations));
+		List<Integer> res = numOfIslands(R, C, operations);
+		for (int num : res) System.out.print(num + " ");
 	}
 	
-    public List<Integer> numOfIslands(int R, int C, int[][] operators) {
+    public static List<Integer> numOfIslands(int R, int C, int[][] operators) {
         // Your code here
         List<Integer> res = new ArrayList<>();
         DisjointSet ds = new DisjointSet(R * C);
