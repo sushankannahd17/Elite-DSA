@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int R = sc.nextInt(), C = sc.nextInt();
-        int[] grid = new int[R][C];
+        int[][] grid = new int[R][C];
         for (int row = 0; row < R; row++) {
         	for (int col = 0; col < C; col++) {
         		grid[row][col] = sc.nextInt();
@@ -35,7 +35,7 @@ public class Main {
             }
         }
         
-        return maxLen;
+        System.out.println(maxLen);
     }
     
     private static int[][] OFFSETS = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
